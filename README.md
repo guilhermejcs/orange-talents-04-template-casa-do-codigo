@@ -22,9 +22,11 @@ Spring JPA
 
 
 
-## Classes
+## Implementações
 
 ### Cadastro novo autor
+
+#### Tag: v1.2
 
 #### Atributos
 
@@ -44,3 +46,16 @@ Spring JPA
 #### Resultado esperado
 
 - Um novo autor criado e status 200 retornado
+
+### Email único para autor
+
+#### Tag: v1.3
+
+#### Necessidades
+
+- O email do autor precisa ser único no sistema
+
+#### Resultado esperado
+
+- Erro de validação no caso de email duplicado
+

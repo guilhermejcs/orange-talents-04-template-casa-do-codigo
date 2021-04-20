@@ -20,6 +20,10 @@ public class Autor {
 	private @NotBlank @Email String email;
 	private @NotBlank @Size(max = 400) String descricao;
 	private LocalDateTime instanteCriacao = LocalDateTime.now();
+	
+	@Deprecated
+	public Autor() {
+	}
 
 	public Autor(@NotBlank String nome, @NotBlank @Email String email,
 			@NotBlank @Size(max = 400) String descricao) {
