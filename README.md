@@ -47,6 +47,8 @@ Spring JPA
 
 - Um novo autor criado e status 200 retornado
 
+------
+
 ### Email único para autor
 
 #### Tag: v1.3
@@ -59,3 +61,20 @@ Spring JPA
 
 - Erro de validação no caso de email duplicado
 
+------
+
+### Cadastro de uma classe
+
+#### Necessidades
+
+- Toda categoria precisa de um nome
+
+#### Restrições
+
+- O nome é obrigatório
+- O nome não pode ser duplicado
+
+#### Resultado esperado
+
+- Uma nova categoria cadastrada no sistema e status 200 retorno
+- Caso alguma restrição não seja atendida, retorne 400 e um json informando os problemas de validação
