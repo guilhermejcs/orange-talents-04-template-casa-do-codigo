@@ -1,7 +1,6 @@
 package br.com.zupacademy.guilhermejcs.casadocodigo.detalhelivro;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import br.com.zupacademy.guilhermejcs.casadocodigo.cadastrolivro.Livro;
