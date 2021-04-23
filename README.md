@@ -141,3 +141,21 @@ Para que seja fácil pegar um id do livro, vamos exibir a lista de livros cadast
 #### **Resultado esperado**
 
 Um json com a lista de livros com id e nome do livro
+
+------
+
+### Página de detalhes do livro
+
+#### Tag: v1.7
+
+#### Necessidades
+
+- Ter um endpoint que em função de um id de livro retorne os detalhes necessários para montar a página.
+
+#### Restrições
+
+- Se o id não existir é para retornar 404
+
+#### Resultado esperado
+
+- que o front possa montar a página
