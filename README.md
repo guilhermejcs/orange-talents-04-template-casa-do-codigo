@@ -187,3 +187,48 @@ Cada país tem um nome e cada estado tem um nome e pertence a um país.
 
 - Dois endpoints para que seja possível cadastrar países e estados. Pode existir país sem estados associados.
 - Caso alguma restrição não seja atendida, retornar 400 e json com os problemas de validação.
+
+------
+
+### Começo do fluxo de pagamento
+
+#### Tag: v1.9
+
+#### Necessidades
+
+Agora vamos começar o processo de conclusão de compra. Primeiro vamos realizar um cadastro de clientes.
+
+Os seguintes campos precisam ser preenchidos:
+
+- email
+- nome
+- sobrenome
+- documento(cpf/cnpj)
+- endereco
+- complemento
+- cidade
+- pais
+- estado(caso aquele pais tenha estado)
+- telefone
+- cep
+
+#### Restrição
+
+- email obrigatório e com formato adequado
+- email é único no sistema
+- nome obrigatório
+- sobrenome obrigatório
+- documento(cpf/cnpj) obrigatório e só precisa ser um cpf ou cnpj
+- documento é único no sistema
+- endereco obrigatório
+- complemento obrigatório
+- cidade obrigatório
+- país obrigatório
+- se o país tiver estados, um estado precisa ser selecionado
+- estado(caso aquele pais tenha estado) - apenas se o país tiver cadastro de estados
+- telefone obrigatório
+- cep é obrigatório
+
+#### Resultado esperado
+
+- Cliente cadastrado no sistema e status 200 retornado com o id do novo cliente como corpo da resposta.

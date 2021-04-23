@@ -1,0 +1,26 @@
+package br.com.zupacademy.guilhermejcs.casadocodigo.compra;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
+import javax.validation.Valid;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CompraController {
+
+	@PersistenceContext
+	EntityManager manager;
+	
+	@PostMapping(value = "/compras")
+	@Transactional
+	public String criaCompra(@RequestBody @Valid NovaCompraRequest request) {
+		Compra novaCompra = request.toModel(manager);
+		return novaCompra.toString();
+	}
+
+	
+}
